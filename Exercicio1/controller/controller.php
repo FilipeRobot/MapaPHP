@@ -25,11 +25,11 @@
     $carro->setCambio($cambio);
 
     //Motor
-    $motor = new Motor();
-    $motor->setCilindro($cilindro);
-    $motor->setPotencia($potencia);
-    $motor->setGiroAtual($giroAtual);
-    $motor->setCombustivel($combustivel);
+    //$motor = new Motor();
+    $carro->setCilindro($cilindro);
+    $carro->setPotencia($potencia);
+    $carro->setGiroAtual($giroAtual);
+    $carro->setCombustivel($combustivel);
 
 
     $carro->imprimeCarro();
