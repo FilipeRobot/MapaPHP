@@ -11,19 +11,25 @@ class Carro extends Motor
     public $motor, $modelo, $cor, $marca, $ano, $cambio;
 
     public function imprimeCarro(){
+        echo "<fieldset>";
+        echo "<h2>Informações do Carro</h2>";
         printf("Motor: {$this->getMotor()} <br/>
                        Modelo: {$this->getModelo()} <br/>
                        Cor: {$this->getCor()} <br/>
                        Marca: {$this->getMarca()} <br/>
                        Ano: {$this->getAno()} <br/>
                        Cambio: {$this->getCambio()} <br/>");
+        echo "</fieldset>";
     }
 
     public function imprimeMotor(){
+        echo "<fieldset>";
+        echo "<h2>Informações do Motor</h2>";
         printf("Cilindro: {$this->getCilindro()} <br/>
                        Potencia: {$this->getPotencia()} <br/>
                        Giro Atual: {$this->getGiroAtual()} <br/>
                        Combustível: {$this->getCombustivel()}");
+        echo "</fieldset>";
     }
 
     /**

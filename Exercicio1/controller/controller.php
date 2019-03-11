@@ -25,7 +25,6 @@
     $carro->setCambio($cambio);
 
     //Motor
-    //$motor = new Motor();
     $carro->setCilindro($cilindro);
     $carro->setPotencia($potencia);
     $carro->setGiroAtual($giroAtual);
@@ -33,7 +32,6 @@
 
 
     $carro->imprimeCarro();
-    echo "<br/>";
     $carro->imprimeMotor();
 ?>
 <hr size="2" color="black"/>
