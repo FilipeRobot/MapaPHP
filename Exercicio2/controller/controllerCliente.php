@@ -1,31 +1,35 @@
-<?php
-if (filter_input(INPUT_GET, "codigo")&&
-    filter_input(INPUT_GET, "nome")&&
-    filter_input(INPUT_GET, "dataNascimento")&&
-    filter_input(INPUT_GET, "preferencia")){
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulário Exercício 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body class="container-fluid">
+    <div class="container-fluid">
+        <br/>
+        <?php
+        if (filter_input(INPUT_POST, "codigo")&&
+            filter_input(INPUT_POST, "nome")&&
+            filter_input(INPUT_POST, "dataNascimento")&&
+            filter_input(INPUT_POST, "preferencia")){
 
-    $codigo = filter_input(INPUT_GET, "codigo");
-    $nome = filter_input(INPUT_GET, "nome");
-    $dataNascimento = filter_input(INPUT_GET, "dataNascimento");
-    $preferencia = filter_input(INPUT_GET, "preferencia");
+            $codigo = filter_input(INPUT_POST, "codigo");
+            $nome = filter_input(INPUT_POST, "nome");
+            $dataNascimento = filter_input(INPUT_POST, "dataNascimento");
+            $preferencia = filter_input(INPUT_POST, "preferencia");
 
-    require_once '../model/Cliente.php';
-    $cilente1 = new Cliente($codigo, $nome, $dataNascimento, $preferencia);
+            require_once '../model/Cliente.php';
+            $cilente1 = new Cliente($codigo, $nome, $dataNascimento, $preferencia);
 
-    $cilente1->imprimir();
-}else{
-    echo "Erro!";
-}
-?>
-<hr size="2" color="black"/>
-<button type="button" onclick="history.back()">Voltar</button>
-
-<!--
-codigo=222
-
-nome=filipe
-
-dataNascimento=2019-03-05
-
-preferencia=preto
--->
+            $cilente1->imprimir();
+        }else{
+            echo "<div class=\"alert alert-danger\"><h2>
+          <strong>Erro!</strong> Campos não informados</h2></div>";
+        }
+        ?>
+        <hr size="2" color="black"/>
+        <button type="button" onclick="history.back()">Voltar</button>
+    </div>
+</body>

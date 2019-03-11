@@ -1,3 +1,11 @@
+<style type="text/css">
+    fieldset {
+        text-align: justify-all;
+        box-shadow: 1px 1px 10px black;
+        padding: 5px ;
+        width: 25%;
+    }
+</style>
 <?php
 /**
  * Created by Filipe.

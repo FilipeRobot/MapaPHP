@@ -1,3 +1,14 @@
+<style type="text/css">
+    fieldset {
+        text-align: justify-all;
+        box-shadow: 1px 1px 10px black;
+        padding: 5px ;
+        width: 40%;
+    }
+    fieldset.carro{
+        margin-bottom: 15px;
+    }
+</style>
 <?php
 /**
  * Created by Filipe.
@@ -6,12 +17,13 @@
  * Time: 16:04
  */
 include 'Motor.php';
+
 class Carro extends Motor
 {
     public $motor, $modelo, $cor, $marca, $ano, $cambio;
 
     public function imprimeCarro(){
-        echo "<fieldset>";
+        echo "<fieldset class='carro'>";
         echo "<h2>Informações do Carro</h2>";
         printf("Motor: {$this->getMotor()} <br/>
                        Modelo: {$this->getModelo()} <br/>
@@ -23,7 +35,7 @@ class Carro extends Motor
     }
 
     public function imprimeMotor(){
-        echo "<fieldset>";
+        echo "<fieldset class='motor'>";
         echo "<h2>Informações do Motor</h2>";
         printf("Cilindro: {$this->getCilindro()} <br/>
                        Potencia: {$this->getPotencia()} <br/>
