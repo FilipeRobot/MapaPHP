@@ -185,7 +185,5 @@ class Carro extends Motor
     {
         $this->combustivel = $combustivel;
     }
-
-
 }
 ?>
