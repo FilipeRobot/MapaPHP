@@ -5,7 +5,7 @@
  * Date: 10/03/2019
  * Time: 18:04
  */
-
+include 'Pessoa.php';
 class Colaborador extends Pessoa
 {
     public $setor;
@@ -15,6 +15,14 @@ class Colaborador extends Pessoa
     public function imprimir()
     {
         // TODO: Implement imprimir() method.
+        echo "<fieldset>";
+        echo "<h2>Informações do Colaborador</h2>";
+        printf("Codigo: {$this->getCodigo()}<br/>Nome: {$this->getNome()}<br/>");
+        echo "Data de Nascimento: ".date('d/m/Y',strtotime($this->getDataNascimento()))."<br/>";
+        printf("Setor: {$this->getSetor()}<br/>");
+        echo "Data de Admissão: ".date("d/m/Y",strtotime($this->getDataAdmissao()))."<br/>";
+        printf("Salario: R$ {$this->getSalario()}");
+        echo "</fieldset>";
     }
 
     public function __construct($codigo, $nome, $dataNascimento, $setor, $dataAdmissao, $salario)

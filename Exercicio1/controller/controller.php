@@ -1,6 +1,4 @@
 <?php
-    require_once '../model/Carro.php';
-    require_once '../model/Motor.php';
     //Dados Carro
     $motor = filter_input(INPUT_POST, "motor");
     $modelo = filter_input(INPUT_POST, "modelo");
@@ -15,6 +13,8 @@
     $giroAtual = filter_input(INPUT_POST, "giroAtual");
     $combustivel = filter_input(INPUT_POST, "combustivel");
 
+    require_once '../model/Carro.php';
+    require_once '../model/Motor.php';
     $carro = new Carro();
     //Carro
     $carro->setMotor($motor);
@@ -29,7 +29,6 @@
     $carro->setPotencia($potencia);
     $carro->setGiroAtual($giroAtual);
     $carro->setCombustivel($combustivel);
-
 
     $carro->imprimeCarro();
     $carro->imprimeMotor();
