@@ -17,11 +17,11 @@ class Colaborador extends Pessoa
         // TODO: Implement imprimir() method.
         echo "<fieldset>";
         echo "<h2>Informações do Colaborador</h2>";
-        printf("Codigo: {$this->getCodigo()}<br/>Nome: {$this->getNome()}<br/>");
+        printf("Código: {$this->getCodigo()}<br/>Nome: {$this->getNome()}<br/>");
         echo "Data de Nascimento: ".date('d/m/Y',strtotime($this->getDataNascimento()))."<br/>";
         printf("Setor: {$this->getSetor()}<br/>");
         echo "Data de Admissão: ".date("d/m/Y",strtotime($this->getDataAdmissao()))."<br/>";
-        printf("Salario: R$ {$this->getSalario()}");
+        echo "Salário: R$ ".number_format($this->getSalario(),2, ',', '.');
         echo "</fieldset>";
     }
 

@@ -39,5 +39,4 @@ class Cliente extends Pessoa
     {
         $this->preferencia = $preferencia;
     }
-
 }

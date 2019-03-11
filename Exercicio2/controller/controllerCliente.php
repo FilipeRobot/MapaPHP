@@ -1,4 +1,9 @@
 <?php
+if (filter_input(INPUT_GET, "codigo")&&
+    filter_input(INPUT_GET, "nome")&&
+    filter_input(INPUT_GET, "dataNascimento")&&
+    filter_input(INPUT_GET, "preferencia")){
+
     $codigo = filter_input(INPUT_GET, "codigo");
     $nome = filter_input(INPUT_GET, "nome");
     $dataNascimento = filter_input(INPUT_GET, "dataNascimento");
@@ -8,13 +13,9 @@
     $cilente1 = new Cliente($codigo, $nome, $dataNascimento, $preferencia);
 
     $cilente1->imprimir();
-    /*
-    printf("Codigo: {$codigo}<br/>Nome: {$nome}<br/>");
-    echo "Data: ".date('d-m-Y',strtotime($dataNascimento))."<br/>";
-    //printf("Data: {$data} <br/>");
-    printf("Preferencia: {$preferencia}<br/>");
-
-    */
+}else{
+    echo "Erro!";
+}
 ?>
 <hr size="2" color="black"/>
 <button type="button" onclick="history.back()">Voltar</button>
