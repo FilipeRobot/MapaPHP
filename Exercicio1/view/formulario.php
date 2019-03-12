@@ -63,7 +63,7 @@
                 </div>
                 <div class="form-group">
                     <label for="giroAtual">Giro Atual: </label>
-                    <input type="number" name="giroAtual" id="giroAtual" placeholder="Informe o Giro Atual">
+                    <input type="text" name="giroAtual" id="giroAtual" placeholder="Informe o Giro Atual">
                 </div>
                 <div class="form-group">
                     <label for="combustivel">Combustivel: </label>
