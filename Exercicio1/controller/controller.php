@@ -10,8 +10,8 @@
 <div class="container-fluid">
     <br/>
     <?php
-    if ((filter_input(INPUT_POST, "motor")&&
-        filter_input(INPUT_POST, "modelo")&&
+    //filter_input(INPUT_POST, "motor")&& <-- Colocar isso na primeira linha do "if" se precisar
+    if ((filter_input(INPUT_POST, "modelo")&&
         filter_input(INPUT_POST, "cor")&&
         filter_input(INPUT_POST, "marca")&&
         filter_input(INPUT_POST, "ano")&&
@@ -21,7 +21,7 @@
         filter_input(INPUT_POST, "giroAtual")&&
         filter_input(INPUT_POST, "combustivel"))) {
     //Dados Carro
-    $motor = filter_input(INPUT_POST, "motor")?filter_input(INPUT_POST, "motor"):"Não Informado";
+    //$motor = filter_input(INPUT_POST, "motor")?filter_input(INPUT_POST, "motor"):"Não Informado";
     $modelo = filter_input(INPUT_POST, "modelo")?filter_input(INPUT_POST, "modelo"):"Não Informado";
     $cor = filter_input(INPUT_POST, "cor")?filter_input(INPUT_POST, "cor"):"Não Informada";
     $marca = filter_input(INPUT_POST, "marca")?filter_input(INPUT_POST, "marca"):"Não Informada";
@@ -37,9 +37,9 @@
     require_once '../model/Carro.php';
     require_once '../model/Motor.php';
     $carro = new Carro();
-    $motorCarro = new Carro();
+    //$motorCarro = new Carro();
     //Carro
-    $carro->setMotor($motor);
+    //$carro->setMotor($motor);
     $carro->setModelo($modelo);
     $carro->setCor($cor);
     $carro->setMarca($marca);
@@ -48,6 +48,21 @@
 
     $carro->imprimeCarro();
 
+    $carro->motor = new Motor();
+    $carro->motor->setCilindro($cilindro);
+    $carro->motor->setPotencia($potencia);
+    $carro->motor->setGiroAtual($giroAtual);
+    $carro->motor->setCombustivel($combustivel);
+
+    $carro->imprimeMotor();
+/*
+    echo "<br/>";
+    echo "<pre>";
+    var_dump($carro);
+    echo "</pre>";
+*/
+
+/*
     //Motor
     $motorCarro->objMotor = new Motor();
     $motorCarro->objMotor->setCilindro($cilindro);
@@ -56,7 +71,7 @@
     $motorCarro->objMotor->setCombustivel($combustivel);
 
     $motorCarro->imprimeMotor();
-
+*/
     }else{
         echo "<div class=\"alert alert-danger\"><h2>
   <strong>Erro!</strong> Campos não informados</h2></div>";

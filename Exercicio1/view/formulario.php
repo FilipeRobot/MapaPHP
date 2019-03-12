@@ -21,12 +21,12 @@
         <form method="post" action="../controller/controller.php" class="form-inline">
             <h2>Dados do Carro</h2>
             <fieldset>
-
+                <!--
                 <div class="form-group">
                     <label for="motor">Motor: </label>
                     <input type="text" name="motor" id="motor" placeholder="Informe o Motor">
                 </div>
-
+                -->
                 <div class="form-group">
                     <label for="modelo">Modelo: </label>
                     <input type="text" name="modelo" id="modelo" placeholder="Informe o Modelo">

@@ -20,13 +20,13 @@
 class Carro
 {
     public $motor, $modelo, $cor, $marca, $ano, $cambio;
-    public $objMotor;
+    //public $objMotor;
 
     public function imprimeCarro(){
         echo "<fieldset class='carro'>";
         echo "<h2>Informações do Carro</h2>";
-        printf("Motor: {$this->getMotor()} <br/>
-                       Modelo: {$this->getModelo()} <br/>
+        //echo "Motor: {$this->getMotor()} <br/>";
+        printf("Modelo: {$this->getModelo()} <br/>
                        Cor: {$this->getCor()} <br/>
                        Marca: {$this->getMarca()} <br/>
                        Ano: {$this->getAno()} <br/>
@@ -37,10 +37,10 @@ class Carro
     public function imprimeMotor(){
         echo "<fieldset class='motor'>";
         echo "<h2>Informações do Motor</h2><br/>";
-        printf("Cilindro: {$this->objMotor->getCilindro()} <br/>
-                       Potencia: {$this->objMotor->getPotencia()} <br/>
-                       Giro Atual: {$this->objMotor->getGiroAtual()} <br/>
-                       Combustível: {$this->objMotor->getCombustivel()}");
+        printf("Cilindro: {$this->motor->getCilindro()} <br/>
+                       Potencia: {$this->motor->getPotencia()} <br/>
+                       Giro Atual: {$this->motor->getGiroAtual()} <br/>
+                       Combustível: {$this->motor->getCombustivel()}");
         echo "</fieldset>";
     }
 
