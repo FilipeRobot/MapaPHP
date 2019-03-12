@@ -16,11 +16,11 @@
  * Date: 10/03/2019
  * Time: 16:04
  */
-include 'Motor.php';
 
-class Carro extends Motor
+class Carro
 {
     public $motor, $modelo, $cor, $marca, $ano, $cambio;
+    public $objMotor;
 
     public function imprimeCarro(){
         echo "<fieldset class='carro'>";
@@ -36,11 +36,11 @@ class Carro extends Motor
 
     public function imprimeMotor(){
         echo "<fieldset class='motor'>";
-        echo "<h2>Informações do Motor</h2>";
-        printf("Cilindro: {$this->getCilindro()} <br/>
-                       Potencia: {$this->getPotencia()} <br/>
-                       Giro Atual: {$this->getGiroAtual()} <br/>
-                       Combustível: {$this->getCombustivel()}");
+        echo "<h2>Informações do Motor</h2><br/>";
+        printf("Cilindro: {$this->objMotor->getCilindro()} <br/>
+                       Potencia: {$this->objMotor->getPotencia()} <br/>
+                       Giro Atual: {$this->objMotor->getGiroAtual()} <br/>
+                       Combustível: {$this->objMotor->getCombustivel()}");
         echo "</fieldset>";
     }
 
@@ -138,70 +138,6 @@ class Carro extends Motor
     public function setCambio($cambio): void
     {
         $this->cambio = $cambio;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCilindro()
-    {
-        return $this->cilindro;
-    }
-
-    /**
-     * @param mixed $cilindro
-     */
-    public function setCilindro($cilindro): void
-    {
-        $this->cilindro = $cilindro;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPotencia()
-    {
-        return $this->potencia;
-    }
-
-    /**
-     * @param mixed $potencia
-     */
-    public function setPotencia($potencia): void
-    {
-        $this->potencia = $potencia;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getGiroAtual()
-    {
-        return $this->giroAtual;
-    }
-
-    /**
-     * @param mixed $giroAtual
-     */
-    public function setGiroAtual($giroAtual): void
-    {
-        $this->giroAtual = $giroAtual;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCombustivel()
-    {
-        return $this->combustivel;
-    }
-
-    /**
-     * @param mixed $combustivel
-     */
-    public function setCombustivel($combustivel): void
-    {
-        $this->combustivel = $combustivel;
     }
 }
 ?>
