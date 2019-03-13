@@ -32,7 +32,7 @@
 
     <footer class="mastfoot mt-auto">
         <div class="inner">
-            <p>Customizado por Filipe</p>
+            <p>Feito por Filipe Lemos <br/>RA: 1729501-5</p>
         </div>
     </footer>
     </body>

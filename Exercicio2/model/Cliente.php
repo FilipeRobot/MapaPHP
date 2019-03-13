@@ -3,24 +3,17 @@
         text-align: justify-all;
         box-shadow: 1px 1px 10px black;
         padding: 5px ;
-        width: 25%;
+        width: max-content;
     }
 </style>
 <?php
-/**
- * Created by Filipe.
- * User: filip
- * Date: 10/03/2019
- * Time: 18:03
- */
-include 'Pessoa.php';
-class Cliente extends Pessoa
-{
+require_once 'Pessoa.php';
+class Cliente extends Pessoa {
+    // Atributos
     public $preferencia;
 
-    public function imprimir()
-    {
-        // TODO: Implement imprimir() method.
+    // Métodos
+    public function imprimir() {
         echo "<fieldset>";
         echo "<h2>Informações do Cliente</h2>";
         printf("Codigo: {$this->getCodigo()}<br/>Nome: {$this->getNome()}<br/>");
@@ -28,8 +21,10 @@ class Cliente extends Pessoa
         //printf("Data: {$data} <br/>");
         printf("Preferencia: {$this->getPreferencia()}<br/>");
         echo "</fieldset>";
+        echo "<br/>";
     }
 
+    // Métodos Especiais
     public function __construct($codigo, $nome, $dataNascimento, $preferencia)
     {
         $this->setCodigo($codigo);

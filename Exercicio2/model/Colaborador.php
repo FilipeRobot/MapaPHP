@@ -3,26 +3,19 @@
         text-align: justify-all;
         box-shadow: 1px 1px 10px black;
         padding: 5px ;
-        width: 31%;
+        width: max-content;
     }
 </style>
 <?php
-/**
- * Created by Filipe.
- * User: filip
- * Date: 10/03/2019
- * Time: 18:04
- */
-include 'Pessoa.php';
-class Colaborador extends Pessoa
-{
+require_once 'Pessoa.php';
+class Colaborador extends Pessoa {
+    // Atributos
     public $setor;
     private $dataAdmissao;
     protected $salario;
 
-    public function imprimir()
-    {
-        // TODO: Implement imprimir() method.
+    // Métodos
+    public function imprimir() {
         echo "<fieldset>";
         echo "<h2>Informações do Colaborador</h2>";
         printf("Código: {$this->getCodigo()}<br/>Nome: {$this->getNome()}<br/>");
@@ -31,8 +24,10 @@ class Colaborador extends Pessoa
         echo "Data de Admissão: ".date("d/m/Y",strtotime($this->getDataAdmissao()))."<br/>";
         echo "Salário: R$ ".number_format($this->getSalario(),2, ',', '.');
         echo "</fieldset>";
+        echo "<br/>";
     }
 
+    // Métodos Especiais
     public function __construct($codigo, $nome, $dataNascimento, $setor, $dataAdmissao, $salario)
     {
         $this->setCodigo($codigo);
@@ -43,49 +38,31 @@ class Colaborador extends Pessoa
         $this->setSalario($salario);
     }
 
-    /**
-     * @return mixed
-     */
     public function getSetor()
     {
         return $this->setor;
     }
 
-    /**
-     * @param mixed $setor
-     */
     public function setSetor($setor): void
     {
         $this->setor = $setor;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDataAdmissao()
     {
         return $this->dataAdmissao;
     }
 
-    /**
-     * @param mixed $dataAdmissao
-     */
     public function setDataAdmissao($dataAdmissao): void
     {
         $this->dataAdmissao = $dataAdmissao;
     }
 
-    /**
-     * @return mixed
-     */
     public function getSalario()
     {
         return $this->salario;
     }
 
-    /**
-     * @param mixed $salario
-     */
     public function setSalario($salario): void
     {
         $this->salario = $salario;
