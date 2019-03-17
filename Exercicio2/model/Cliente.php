@@ -18,7 +18,6 @@ class Cliente extends Pessoa {
         echo "<h2>Informações do Cliente</h2>";
         printf("Codigo: {$this->getCodigo()}<br/>Nome: {$this->getNome()}<br/>");
         echo "Data de nascimento: ".date('d/m/Y',strtotime($this->getDataNascimento()))."<br/>";
-        //printf("Data: {$data} <br/>");
         printf("Preferencia: {$this->getPreferencia()}<br/>");
         echo "</fieldset>";
         echo "<br/>";
