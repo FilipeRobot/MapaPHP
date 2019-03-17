@@ -7,9 +7,13 @@ Diagrama base para a atividade.
 Para este exercício, crie uma pasta chamada exercício1 e salve todos os arquivos dentro desta pasta.
 
 a.    Construa as classes concretas em php, em que cada classe deverá ficar em um arquivo separado.
+
 b.    Criar apenas um formulário para a entrada dos dados das classes.
+
 c.    Crie um index.php que contenha o link para o formulário.
+
 d.    Crie um arquivo nomeado controller.php. Agora receba as informações oriundas do formulário, instancie os objetos e inicialize os valores das propriedades dos objetos.
+
 e.    Ao chamar os métodos imprimirCarro() e imprimirMotor(), devem ser impressos todos os seus respectivos atributos
 
 
@@ -21,10 +25,15 @@ Exercício 2 - Dada a modelagem abaixo, faça:
 Diagrama base para atividade.
 
 Para este exercício, crie uma pasta chamada exercício2 e salve todos os arquivos dentro desta pasta.
+
 a. Construa as classes concretas e a abstrata em php, em que cada classe deverá ficar em um arquivo separado.
+
 b. Crie dois formulários, um para o Cliente e outro para o Colaborador.
+
 c. Crie um index.php que contenha os links para os dois formulários.
+
 d. Criar dois arquivos nomeados de controllerCliente.php e controllerColaborador.php. Em cada controller, receba as informações oriundas de seu respectivo formulário. Instancie os objetos com os valores recebidos.
+
 e. Chame o método imprimir em cada controller.
  
  
